@@ -1,0 +1,20 @@
+.main{
+    width: 500px;
+    height: 350px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    border: 1px solid #222222;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 20px 10px;
+    box-shadow: 0 0 10px 5px rgb(56, 56, 56);
+    
+}
+

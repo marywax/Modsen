@@ -1,0 +1,7 @@
+.question-number{
+    font-size: 18px;
+}
+
+.question-number p{
+    display: inline-block;
+}

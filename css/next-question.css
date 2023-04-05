@@ -1,0 +1,11 @@
+.next-question{
+    display: block;
+    font-size: 10pt;
+    background-color: #5ba56d;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    margin: auto;
+}
+

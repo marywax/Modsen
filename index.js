@@ -1,3 +1,7 @@
+const headElem = document.getElementByClassName("question");
+const answerElem = document.getElementByClassName("answer");
+const numberQuestionElem = document.getElementByClassName("question-number");
+
 class Quiz
 {
    constructor(type, questions, results)
@@ -13,8 +17,36 @@ class Quiz
        //Номер текущего вопроса
        this.current = 0;
    }
-   //Логика
-
+   Click(index)
+   {
+       //Добавляем очки
+       let value = this.questions[this.current].Click(index);
+       this.score += value;
+ 
+       let correct = -1;
+ 
+       //Если было добавлено хотя бы одно очко, то считаем, что ответ верный
+       if(value >= 1)
+       {
+           correct = index;
+       }
+       else
+       {
+           //Иначе ищем, какой ответ может быть правильным
+           for(let i = 0; i < this.questions[this.current].answers.length; i++)
+           {
+               if(this.questions[this.current].answers[i].value >= 1)
+               {
+                   correct = i;
+                   break;
+               }
+           }
+       }
+ 
+       this.Next();
+ 
+       return correct;
+}
 }
 
 class Question
@@ -24,8 +56,6 @@ class Question
        this.text = text;
        this.answers = answers;
    }
-   //Логика
-
 }
 
 class Answer
@@ -56,7 +86,7 @@ const questions =
        new Answer("9", 0),
        new Answer("10", 0),
    ]),
-   
+
    new Question("What is the freezing point of water?",
    [
        new Answer("0", 1),

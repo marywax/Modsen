@@ -1,10 +1,10 @@
 
-.answer{
+.answers{
     display: inline-block;
     margin: 20px;
 }
 
-.answer button{
+.answers button{
     font-size: 12pt;
     background-color: #2b683a;
     border: none;

@@ -13,3 +13,7 @@
     padding: 10px;
     margin: 5px;
 }
+
+.answers button:hover{
+    background-color: #7dc790;
+}

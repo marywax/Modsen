@@ -1,4 +1,4 @@
-.next-question{
+.submit{
     display: block;
     font-size: 10pt;
     background-color: #5ba56d;
@@ -9,3 +9,6 @@
     margin: auto;
 }
 
+.submit:hover{
+    background-color: #397548;
+}

@@ -54,7 +54,7 @@ let questionIndex = 0;
 
 clearPage();
 showQuestion();
-submitButton.onclick=checkAnswer();
+submitButton.onclick=checkAnswer;
 
 
 function clearPage(){
@@ -71,12 +71,23 @@ function showQuestion(){
 
     //Answers
     for(let item of (questions[questionIndex]['answer'])){
-        const answerTemplate =`<button class="answer answer__one">%answer%</button>`;
+        const answerTemplate =`
+        <li>
+        <label>
+            <input type="checkbox" class="answer">
+            <span>%answer%</span>
+        </label>
+        </li>`;
         const answerHTML = answerTemplate.replace("%answer%",item);
         answersContainer.innerHTML += answerHTML;
     }
 }
 
 function checkAnswer(){
-
+    const checkedCheckbox = answersContainer.querySelector('input:checked');
+    console.log(checkedCheckbox);
+    if(!checkedCheckbox){
+        submitButton.blur();
+        return;
+    }
 }

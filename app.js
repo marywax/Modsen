@@ -2,43 +2,43 @@ const questions = [
     {
         question:"How many planets are in the solar system?",
         answer:["8", "9", "10"],
-        correct: "8",
+        correct: 1,
     },
     
     {
         question:"What is the freezing point of water?",
         answer:["0", "-5", "-6"],
-        correct: "0",
+        correct: 1,
     },
 
     {
         question:"What is the longest river in the world?",
         answer:["Nile", "Amazon", "Yangtze"],
-        correct: "Amazon",
+        correct: 2,
     },
 
     {
         question:"How many chromosomes are in the human genome?",
         answer:["42","44","46"],
-        correct: "46",
+        correct: 3,
     },
 
     {
         question:"Which of these characters are friends with Harry Potter?",
         answer:["Ron Weasley","Draco Malfoy","Hermione Granger"],
-        correct: ["Ron Weasley","Hermione Granger"]
+        correct: [1,3]
     },
 
     {
         question:"What is the capital of Canada",
         answer:["Toronto","Ottawa","Vancouver"],
-        correct: "Ottawa",
+        correct: 2,
     },
 
     {
         question:"What is the Jewish New Year called?",
         answer:["Hanukkah","Yom Kippur","Kwanzaa"],
-        correct: "Yom Kippur",
+        correct: 2,
     }
 ]
 
@@ -70,16 +70,23 @@ function showQuestion(){
     titleContainer.innerHTML=title;
 
     //Answers
+    let answerNumber = 1;
+
     for(let item of (questions[questionIndex]['answer'])){
         const answerTemplate =`
         <li>
         <label>
-            <input type="checkbox" class="answer">
+            <input value = '%number%' type="checkbox" class="answer">
             <span>%answer%</span>
         </label>
         </li>`;
-        const answerHTML = answerTemplate.replace("%answer%",item);
+
+        let answerHTML = answerTemplate
+                                    .replace("%answer%",item)
+                                    .replace("%number%",answerNumber);
+
         answersContainer.innerHTML += answerHTML;
+        answerNumber++;
     }
 }
 

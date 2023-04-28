@@ -1,7 +1,7 @@
-.question-number{
+.number-of-question{
     font-size: 18px;
 }
 
-.question-number p{
+.number-of-question p{
     display: inline-block;
 }

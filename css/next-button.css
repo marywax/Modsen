@@ -1,4 +1,4 @@
-.submit{
+#next-button{
     display: block;
     font-size: 10pt;
     background-color: #5ba56d;
@@ -9,6 +9,6 @@
     margin: auto;
 }
 
-.submit:hover{
+#next-button:hover{
     background-color: #397548;
 }

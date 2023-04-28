@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="/css/body.css">
+    <!-- <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/title.css">
-    <link rel="stylesheet" href="/css/question_number.css">
+    <link rel="stylesheet" href="/css/number-of-question.css">
     <link rel="stylesheet" href="/css/hint.css">
     <link rel="stylesheet" href="/css/answer.css">
-    <link rel="stylesheet" href="/css/submit.css">
+    <link rel="stylesheet" href="/css/next-button.css"> -->
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
     <div class="main">
-        <div class="content">
-            <div class="question-number">
-                0 / 0
+
+        <div id="display-container">
+            <div class="header">
+                <div class="number-of-count">
+                    <span class="number-of-question"></span>
+                </div>
             </div>
 
-            <h1 class="title">question</h1>
-            <div class="hint">hint</div>
-
-            <ul class="answers">
-                <li>
-                    <label>
-                        <input type="checkbox" class="answer">
-                        <span>Answer</span>
-                    </label>
-                </li>
-            </ul>
-                
-            <button class="submit">Next question</button>
+            <div id="container">
+            </div>
+            <button id="next-button">Next</button>
         </div>
+
     </div>
     <script src="/app.js"></script>
 </body>
+
 </html>

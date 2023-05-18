@@ -1,6 +1,5 @@
 const quizArray = [
     {
-        id: "0",
         question: "How many planets are in the solar system?",
         options: ["8", "9", "10"],
         correct: "8",
@@ -75,8 +74,8 @@ const quizDisplay = (questionCount) => {
     });
     quizCards[questionCount].classList.remove("hide");
 };
+
 function quizCreator() {
-    console.log("ddd")
     for (let i of quizArray) {
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
